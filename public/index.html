@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Designer Daniel | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo" id="secretTrigger">Graphic Designer <span>Daniel</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home" data-i18n="nav_home">الرئيسية</a></li>
+                <li><a href="#stats" data-i18n="nav_stats">إحصائيات</a></li>
+                <li><a href="#portfolio" data-i18n="nav_portfolio">أعمالي</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">مهاراتي</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">تواصل معي</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switcher">
+            <button onclick="setLanguage('ar')" class="active-lang">AR</button>
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('ku')">KU</button>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <!-- القسم الرئيسي -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="badge" data-i18n="hero_badge">مرحباً، أنا دانيال</span>
+                <h1 id="heroTitle" data-i18n="hero_title">أصمم تجارب رقمية<br>وأبني حلول الذكاء الاصطناعي</h1>
+                <p class="hero-desc" id="heroDesc" data-i18n="hero_desc">متخصص في تصميم واجهات المستخدم وتطوير نماذج الذكاء الاصطناعي.</p>
+                <a href="#contact" class="cta-btn"><span data-i18n="hero_cta">ابدأ مشروعك معي</span> <i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="hero-img-container">
+                <img src="" alt="صورة شخصية" class="hero-img" id="profileImgDisplay">
+            </div>
+        </section>
+
+        <!-- الإحصائيات -->
+        <section class="stats-section" id="stats">
+            <div class="stats-grid">
+                <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label" data-i18n="stat_years">سنوات خبرة</div></div>
+                <div class="stat-card"><div class="stat-num">250+</div><div class="stat-label" data-i18n="stat_projects">مشروع منجز</div></div>
+                <div class="stat-card"><div class="stat-num">180+</div><div class="stat-label" data-i18n="stat_clients">عميل سعيد</div></div>
+                <div class="stat-card"><div class="stat-num">15+</div><div class="stat-label" data-i18n="stat_awards">جوائز وتقدير</div></div>
+            </div>
+        </section>
+
+        <!-- معرض الأعمال -->
+        <section id="portfolio">
+            <h2 class="section-title"><span data-i18n="portfolio_title">أحدث</span> <span data-i18n="portfolio_highlight">الأعمال</span></h2>
+            <div class="portfolio-grid" id="portfolioGrid"></div>
+        </section>
+
+        <!-- المهارات -->
+        <section id="skills">
+            <h2 class="section-title"><span data-i18n="skills_title">مهاراتي</span> <span data-i18n="skills_highlight">التقنية</span></h2>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="skill-header"><span>Figma / Adobe XD</span><span>95%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Python & AI Tools</span><span>90%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Photoshop / Illustrator</span><span>85%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- التذييل -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3 data-i18n="contact_title">تواصل معي</h3><br>
+                <a href="https://wa.me/9647863000110" target="_blank" class="contact-link">
+                    <i class="fab fa-whatsapp"></i> <span>07863000110</span>
+                </a>
+                <a href="mailto:fgfzfk9@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> <span>fgfzfk9@gmail.com</span>
+                </a>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/p23sq" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-i18n="copyright">جميع الحقوق محفوظة © 2026 | Graphic Designer Daniel</div>
+    </footer>
+
+    <!-- زر البوت العائم -->
+    <div class="chat-toggle" onclick="toggleChat()">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- نافذة البوت -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span data-i18n="chat_title">مساعد دانيال الذكي</span>
+            <button onclick="toggleChat()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="msg bot" data-i18n="chat_welcome">مرحباً! أنا مساعد دانيال. كيف يمكنني مساعدتك؟ 😊</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="اكتب رسالتك..." onkeypress="handleEnter(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- لوحة الإدارة الكاملة -->
+    <div class="modal" id="adminModal">
+        <div class="modal-content admin-dashboard">
+            <!-- نموذج تسجيل الدخول -->
+            <div id="loginForm">
+                <h2><i class="fas fa-lock"></i> <span data-i18n="admin_login_title">منطقة محمية</span></h2>
+                <input type="password" id="adminPass" class="form-control" placeholder="الرمز السري">
+                <button class="cta-btn full-width" onclick="checkLogin()" data-i18n="admin_login_btn">دخول</button>
+                <button class="cancel-btn" onclick="closeAdminModal()" data-i18n="admin_cancel">إلغاء</button>
+            </div>
+
+            <!-- لوحة التحكم -->
+            <div id="adminPanel" style="display: none;">
+                <div class="admin-tabs">
+                    <button class="tab-btn active" onclick="switchTab('content')"><i class="fas fa-pen"></i> <span data-i18n="tab_content">المحتوى</span></button>
+                    <button class="tab-btn" onclick="switchTab('projects')"><i class="fas fa-images"></i> <span data-i18n="tab_projects">الأعمال</span></button>
+                    <button class="tab-btn" onclick="switchTab('layout')"><i class="fas fa-layer-group"></i> <span data-i18n="tab_layout">الترتيب</span></button>
+                </div>
+
+                <!-- تبويب المحتوى -->
+                <div id="tab-content" class="tab-content active">
+                    <div class="form-group">
+                        <label data-i18n="label_profile_img">الصورة الشخصية:</label>
+                        <input type="file" id="editProfileImg" class="form-control" accept="image/*" onchange="previewImage(this, 'profilePreview')">
+                        <img id="profilePreview" class="preview-thumb" style="display:none; margin-top:10px; border-radius:10px;">
+                    </div>
+                    <div class="form-group"><label data-i18n="label_title">العنوان الرئيسي:</label><textarea id="editTitle" class="form-control"></textarea></div>
+                    <div class="form-group"><label data-i18n="label_desc">النبذة التعريفية:</label><textarea id="editDesc" class="form-control"></textarea></div>
+                    <div class="form-group"><label data-i18n="label_phone">رقم الهاتف:</label><input type="text" id="editPhone" class="form-control"></div>
+                    <button class="cta-btn full-width" onclick="saveContentChanges()" data-i18n="btn_save_content">حفظ المحتوى</button>
+                </div>
+
+                <!-- تبويب إدارة الأعمال -->
+                <div id="tab-projects" class="tab-content">
+                    <div class="add-project-form">
+                        <h3 data-i18n="add_proj_title">إضافة عمل جديد</h3>
+                        <input type="text" id="newProjTitle" class="form-control" placeholder="عنوان المشروع">
+                        <input type="text" id="newProjTag" class="form-control" placeholder="التصنيف">
+                        
+                        <label style="color:var(--text-muted); font-size:0.9rem; display:block; margin-bottom:5px;" data-i18n="label_proj_img">صورة المشروع:</label>
+                        <input type="file" id="newProjImgFile" class="form-control" accept="image/*" onchange="previewImage(this, 'projPreview')">
+                        <img id="projPreview" class="preview-thumb" style="display:none; margin-top:10px; border-radius:10px; max-height:100px;">
+                        
+                        <button class="cta-btn full-width" onclick="addProjectFromDevice()" data-i18n="btn_add_proj">إضافة للمشروع</button>
+                    </div>
+                    <hr style="border-color: var(--border); margin: 20px 0;">
+                    <h3 data-i18n="current_projs_title">المشاريع الحالية</h3>
+                    <ul class="sortable-list" id="adminProjectsList"></ul>
+                </div>
+
+                <!-- تبويب الترتيب -->
+                <div id="tab-layout" class="tab-content">
+                    <p style="margin-bottom: 15px; color: var(--text-muted);" data-i18n="layout_hint">اسحب لإعادة ترتيب الأقسام:</p>
+                    <ul class="sortable-list" id="sortableSections"></ul>
+                    <button class="cta-btn full-width" style="margin-top: 20px;" onclick="saveLayoutChanges()" data-i18n="btn_save_layout">حفظ الترتيب</button>
+                </div>
+
+                <button class="logout-btn" onclick="logout()" data-i18n="btn_logout">تسجيل خروج</button>
+            </div>
+        </div>
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+</body>
+</html>

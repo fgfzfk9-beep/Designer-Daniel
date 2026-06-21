@@ -1,0 +1,134 @@
+:root {
+    --bg-dark: #0a0a0f;
+    --bg-card: #12121a;
+    --primary: #7c3aed;
+    --primary-glow: rgba(124, 58, 237, 0.5);
+    --neon: #b026ff;
+    --text-main: #ffffff;
+    --text-muted: #a1a1aa;
+    --border: rgba(255, 255, 255, 0.1);
+    --font-main: 'Cairo', 'Noto Sans Arabic', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
+body { font-family: var(--font-main); background-color: var(--bg-dark); color: var(--text-main); overflow-x: hidden; line-height: 1.6; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
+#particles-js { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at center, #1a103c 0%, #0a0a0f 100%); }
+
+/* Header */
+header { position: fixed; top: 0; width: 100%; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 10, 15, 0.8); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid var(--border); }
+.logo { font-size: 1.4rem; font-weight: 900; cursor: pointer; user-select: none; }
+.logo span { color: var(--neon); }
+nav ul { display: flex; gap: 30px; }
+nav a:hover { color: var(--neon); }
+
+.lang-switcher { display: flex; gap: 5px; }
+.lang-switcher button { background: transparent; border: 1px solid var(--border); color: var(--text-muted); padding: 5px 10px; border-radius: 5px; cursor: pointer; font-family: var(--font-main); font-size: 0.8rem; transition: 0.3s; }
+.lang-switcher button.active-lang, .lang-switcher button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* Hero */
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: space-between; padding: 120px 5% 50px; gap: 50px; }
+.hero-content { max-width: 600px; }
+.badge { display: inline-block; background: rgba(124, 58, 237, 0.2); color: var(--neon); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin-bottom: 20px; border: 1px solid rgba(124, 58, 237, 0.3); }
+h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 20px; background: linear-gradient(to right, #fff, var(--neon)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-desc { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 40px; }
+.cta-btn { background: var(--primary); color: white; padding: 15px 40px; border-radius: 50px; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 0 20px var(--primary-glow); border: none; cursor: pointer; }
+.cta-btn:hover { transform: translateY(-3px); box-shadow: 0 0 30px var(--neon); }
+.hero-img-container { position: relative; width: 400px; height: 400px; }
+.hero-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 3px solid var(--primary); box-shadow: 0 0 50px var(--primary-glow); animation: float 6s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+
+/* Sections */
+section { padding: 80px 5%; }
+.section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+.section-title span:last-child { color: var(--neon); }
+
+/* Stats */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.stat-card { background: var(--bg-card); padding: 30px; border-radius: 15px; text-align: center; border: 1px solid var(--border); transition: 0.3s; }
+.stat-card:hover { border-color: var(--neon); transform: translateY(-5px); }
+.stat-num { font-size: 2.5rem; font-weight: 900; color: var(--neon); margin-bottom: 5px; }
+.stat-label { color: var(--text-muted); font-size: 0.9rem; }
+
+/* Portfolio Grid with Unified Background */
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.project-card { background: var(--bg-card); border-radius: 15px; overflow: hidden; border: 1px solid var(--border); transition: 0.3s; display: flex; flex-direction: column; }
+.project-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+.project-img-wrapper { width: 100%; height: 220px; background: #1e1e2d; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+.project-img-wrapper img { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; transition: 0.3s; }
+.project-card:hover .project-img-wrapper img { opacity: 1; transform: scale(1.05); }
+.project-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+.project-tag { font-size: 0.8rem; color: var(--primary); margin-bottom: 5px; display: block; font-weight: 700; }
+
+/* Skills */
+.skills-container { max-width: 800px; margin: 0 auto; }
+.skill-item { margin-bottom: 20px; }
+.skill-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.progress-bar { width: 100%; height: 8px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--neon)); border-radius: 10px; }
+
+/* Footer */
+footer { background: var(--bg-card); padding: 60px 5% 20px; border-top: 1px solid var(--border); }
+.footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 40px; }
+.contact-info h3 { margin-bottom: 10px; }
+.contact-link { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: var(--text-muted); }
+.contact-link:hover { color: var(--neon); }
+.contact-link i { color: var(--neon); font-size: 1.2rem; }
+.social-links { display: flex; gap: 15px; margin-top: 20px; }
+.social-links a { width: 40px; height: 40px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border); }
+.social-links a:hover { background: var(--primary); border-color: var(--primary); }
+.copyright { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-top: 20px; border-top: 1px solid var(--border); }
+
+/* Chatbot Styles */
+.chat-toggle { position: fixed; bottom: 30px; left: 30px; width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer; box-shadow: 0 0 20px var(--primary-glow); z-index: 999; transition: 0.3s; }
+.chat-toggle:hover { transform: scale(1.1); background: var(--neon); }
+
+.chat-window { position: fixed; bottom: 100px; left: 30px; width: 350px; height: 450px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; display: none; flex-direction: column; z-index: 999; box-shadow: 0 10px 40px rgba(0,0,0,0.5); overflow: hidden; }
+.chat-header { background: var(--primary); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; }
+.chat-header button { background: none; border: none; color: white; cursor: pointer; font-size: 1.2rem; }
+.chat-body { flex-grow: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+.msg { padding: 10px 15px; border-radius: 15px; max-width: 80%; font-size: 0.9rem; line-height: 1.4; word-break: break-word; }
+.msg.bot { background: rgba(255,255,255,0.1); align-self: flex-start; border-bottom-right-radius: 2px; }
+.msg.user { background: var(--primary); align-self: flex-end; border-bottom-left-radius: 2px; }
+.chat-input { padding: 15px; border-top: 1px solid var(--border); display: flex; gap: 10px; }
+.chat-input input { flex-grow: 1; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 20px; padding: 10px 15px; color: white; font-family: var(--font-main); }
+.chat-input button { background: var(--primary); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; }
+
+/* Admin Modal & Dashboard */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 2000; align-items: center; justify-content: center; }
+.admin-dashboard { background: var(--bg-card); padding: 40px; border-radius: 20px; width: 90%; max-width: 700px; border: 1px solid var(--primary); max-height: 90vh; overflow-y: auto; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; color: var(--text-muted); }
+.form-control { width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 8px; color: white; font-family: var(--font-main); margin-bottom: 10px; }
+.full-width { width: 100%; justify-content: center; margin-top: 10px; }
+.cancel-btn, .logout-btn { background: none; border: none; color: var(--text-muted); width: 100%; margin-top: 10px; cursor: pointer; padding: 10px; }
+.logout-btn { color: #ff4d4d; border-top: 1px solid var(--border); margin-top: 30px; }
+
+.admin-tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 10px; overflow-x: auto; }
+.tab-btn { background: transparent; border: none; color: var(--text-muted); cursor: pointer; padding: 8px 15px; font-family: var(--font-main); font-size: 1rem; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.tab-btn.active { color: var(--neon); border-bottom: 2px solid var(--neon); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.sortable-list { list-style: none; padding: 0; }
+.sortable-item { background: rgba(255,255,255,0.05); padding: 15px; margin-bottom: 10px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; cursor: grab; border: 1px solid var(--border); }
+.sortable-item:active { cursor: grabbing; border-color: var(--neon); }
+.drag-handle { color: var(--text-muted); margin-left: 10px; }
+
+.add-project-form h3 { margin-bottom: 15px; color: var(--neon); }
+.delete-proj-btn { background: rgba(255, 77, 77, 0.1); color: #ff4d4d; border: 1px solid rgba(255, 77, 77, 0.3); padding: 5px 10px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-size: 0.8rem; align-self: flex-start; }
+.delete-proj-btn:hover { background: #ff4d4d; color: white; }
+
+.preview-thumb { max-width: 100%; border: 2px solid var(--primary); }
+
+@media (max-width: 768px) {
+    .hero { flex-direction: column-reverse; text-align: center; padding-top: 100px; }
+    .hero-img-container { width: 250px; height: 250px; margin: 0 auto; }
+    h1 { font-size: 2.2rem; }
+    nav ul { display: none; }
+    .chat-window { width: 90%; left: 5%; bottom: 100px; }
+    header { flex-wrap: wrap; gap: 10px; }
+    .lang-switcher { order: 3; width: 100%; justify-content: center; }
+}
